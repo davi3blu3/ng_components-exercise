@@ -1,0 +1,32 @@
+<div class="component-outline">
+  <h2>Parent Component</h2>
+
+  <div class="row">
+    <div class="col-2">
+      <h5>Parent var:</h5>
+    </div>
+    <div class="col-10">
+      <input type="text" [(ngModel)]="parVar">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-2">
+      <h5>Child var:</h5>
+    </div>
+    <div class="col-10">
+      <h5>{{ chiVar }}</h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-2">
+      <h5>Grand var:</h5>
+    </div>
+    <div class="col-10">
+      <h5>{{ granVar }}</h5>
+    </div>
+  </div>
+
+  <app-child [parVar]="parVar" (varEmit)="receive($event)"></app-child>
+</div>
